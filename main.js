@@ -121,3 +121,18 @@ document.getElementById("transfer-button").addEventListener('click',function(){
     }
     document.getElementById("transfer-money-parent").style.display="block"
 })  
+
+// bonus button
+document.getElementById("bonus-botton").addEventListener('click',function(){
+        const forms=document.getElementsByClassName("form")
+    for(const form of forms){
+      form.style.display="none"
+    }
+    document.getElementById("get-bonus-parent").style.display="block"
+
+})
+
+// pay Bill
+
+
+// Transactions
