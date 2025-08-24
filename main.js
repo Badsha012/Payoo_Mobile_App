@@ -8,15 +8,38 @@ function getInputValueNumber(id){
      return inputFieldValueNumber
 }
 
+function getInputValue(id){
+    const inputField=document.getElementById(id)
+     const inputFieldValue=inputField.value
+     return inputFieldValue
 
+}
+
+// fnction inner text value
+function getInnerText(id){
+    const element=document.getElementById(id)
+    const elementValue=element.innerText
+    const elementValueNumer=parseInt(elementValue)
+    return elementValueNumer
+ 
+
+}
+
+// function innnertext
+
+function setInnertext( value){
+    const aviableValue=document.getElementById("aviable-balance")
+     aviableValue.innerText =value
+}
 
 // add money btn
 
 document.getElementById("addMoney").addEventListener('click',function(e){
 e.preventDefault()
 // console.log("add money btm click")
+const bank=getInputValue("bank")
 
-const bank=document.getElementById("bank").value
+// const bank=document.getElementById("bank").value
 
 const account=document.getElementById("account").value
 // const addMoney=parseInt(document.getElementById("add-money").value)
@@ -26,7 +49,8 @@ const account=document.getElementById("account").value
 const pin=getInputValueNumber("pin-number")
 
 // console.log(bank,account,addMoney,pin)
-const aviable=parseInt(document.getElementById("aviable-balance").innerText)
+const  aviable=getInnerText("aviable-balance")
+// const aviable=parseInt(document.getElementById("aviable-balance").innerText)
 if(account.length<11){
     alert("Please provide valid account number")
     return;
@@ -38,7 +62,8 @@ if(pin !== validin){
 }
 
 const totalNewAmount=addMoney+aviable
-document.getElementById("aviable-balance").innerText =totalNewAmount
+// document.getElementById("aviable-balance").innerText =totalNewAmount
+setInnertext(totalNewAmount)
 
 })
 
@@ -51,7 +76,8 @@ document.getElementById("withdraw-btn").addEventListener('click',function(e){
     const availableBlance=parseInt(document.getElementById("aviable-balance").innerText)
     // console.log(amount,availableBlance)
     const totalNewAmount=availableBlance - amount
-    document.getElementById("aviable-balance").innerText=totalNewAmount
+    // document.getElementById("aviable-balance").innerText=totalNewAmount
+    setInnertext(totalNewAmount)
 })
 
 
