@@ -133,6 +133,23 @@ document.getElementById("bonus-botton").addEventListener('click',function(){
 })
 
 // pay Bill
+document.getElementById("pay-bill-button").addEventListener('click',function(){
+         const forms=document.getElementsByClassName("form")
+    for(const form of forms){
+      form.style.display="none"
+    }
+    document.getElementById("pay-bill-parent").style.display="block"
+
+})
 
 
 // Transactions
+document.getElementById("transaction-button").addEventListener('click',function(){
+        const forms=document.getElementsByClassName("form")
+    for(const form of forms){
+      form.style.display="none"
+    }
+    document.getElementById("transaction-parent").style.display="block"
+
+})
+
