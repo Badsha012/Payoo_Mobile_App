@@ -99,6 +99,12 @@ document.getElementById("withdraw-btn").addEventListener('click',function(e){
 document.getElementById("add-button").addEventListener('click',function() {
     handleToggle("add-money-parent")
     // document.getElementById("add-money-parent").style.display="block"
+
+    const forBtns = document.getElementsByClassName("from-btn")
+    // console.log(forBtns)
+    for(const btn of forBtns){
+        btn.classList.remove("border-[#0874f2","bg-[#0874f20d")
+    }
 })
 
 
