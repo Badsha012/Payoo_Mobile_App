@@ -81,16 +81,43 @@ document.getElementById("withdraw-btn").addEventListener('click',function(e){
 })
 
 
+
+
 // toggling feature
 
 document.getElementById("add-button").addEventListener('click',function() {
-    document.getElementById("cash-out-parent").style.display="none"
+    // document.getElementById("cash-out-parent").style.display="none"
+    // document.getElementById("add-money-parent").style.display="block"
+    //  document.getElementById("transfer-money-parent").style.display="none"
+
+    const forms=document.getElementsByClassName("form")
+    for(const form of forms){
+      form.style.display="none"
+    }
     document.getElementById("add-money-parent").style.display="block"
 })
 
 
 document.getElementById("cash-out-button").addEventListener('click',function() {
-    document.getElementById("add-money-parent").style.display="none"
+    // document.getElementById("add-money-parent").style.display="none"
+    // document.getElementById("cash-out-parent").style.display="block"
+    // document.getElementById("transfer-money-parent").style.display="block"
+     const forms=document.getElementsByClassName("form")
+    for(const form of forms){
+      form.style.display="none"
+    }
     document.getElementById("cash-out-parent").style.display="block"
 
+
 })
+// transfer money
+document.getElementById("transfer-button").addEventListener('click',function(){
+    //   document.getElementById("add-money-parent").style.display="none"
+    //       document.getElementById("cash-out-parent").style.display="none"
+    //       document.getElementById("transfer-money-parent").style.display="block"
+     const forms=document.getElementsByClassName("form")
+    for(const form of forms){
+      form.style.display="none"
+    }
+    document.getElementById("transfer-money-parent").style.display="block"
+})  
