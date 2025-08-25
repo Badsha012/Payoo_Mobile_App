@@ -1,5 +1,7 @@
 const validin=1234
 
+const transactionData=[]
+
 // function 
 function getInputValueNumber(id){
      const inputField=document.getElementById(id)
@@ -92,6 +94,13 @@ const totalNewAmount=addMoney+aviable
 // document.getElementById("aviable-balance").innerText =totalNewAmount
 setInnertext(totalNewAmount)
 
+const data={
+    name:"Add Money",
+   date: new Date().toLocaleString()
+}
+transactionData.push(data)
+console.log(transactionData)
+
 })
 
 // cash out 
@@ -105,6 +114,14 @@ document.getElementById("withdraw-btn").addEventListener('click',function(e){
     const totalNewAmount=availableBlance - amount
     // document.getElementById("aviable-balance").innerText=totalNewAmount
     setInnertext(totalNewAmount)
+
+    const data={
+    name:"Cash Out",
+   date: new Date().toLocaleString()
+}
+transactionData.push(data)
+console.log(transactionData)
+
 })
 
 
